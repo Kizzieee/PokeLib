@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --nav-font: 1.25rem;
+    --regular-font-size:1.125rem;
+    --blue: #2E6DB5;
+    --yellow: #F5D125;
+    --white: #fff;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   background-color: #FFFBF2;
+   font-family: "Poppins", system-ui;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--yellow);
+    
+}
+
+.hero-text {
+    background-color: var(--yellow);
+    height: 100%;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hero-text-text {
+    width: 50%;
+    z-index: 1;
+}
+
+.hero-text-img{
+    position: relative;
+}
+
+.hero-text-img img, .white-round-bg {
+    width: 100%;
+    height: 70vh;
+    object-fit: contain;
+}
+
+.hero-text-img img{
+    position: relative;
+}
+
+.white-round-bg {
+    background-color: #fff;
+    filter: blur(100px);
+    border-radius: 50%;
+    position: absolute;
+}
+
+@media screen and (max-width: 1200px) {
+    .hero-text {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .hero-text-img{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-text {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .hero-text-text{
+        width: 100%;
+    }
+
+    .hero-text-img{
+        width: 80%;
+        height: 20rem;
+    }
+
+    .hero-text-img img, .white-round-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    z-index: 99;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.navbar.scrolled {
+    background-color: var(--yellow);
+}
+
+.logo {
+    margin-left: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    margin-right: 120px;
+    width: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aliceblue; */
+}
+
+.links a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: var(--nav-font);
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+  
+
+.links a:hover{
+    text-decoration: underline;
+}
+
+/*--------------------------------------------Pokemon Card */
+.card-row{
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+@media screen and (max-width:1200px) {
+    .card-row {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .card-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-row{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.pokemon-card {
+    /* width: 23rem; */
+    height: 24rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
+    padding: 1.5rem;
+}
+
+.pokemon-card h1 {
+    margin: 0;
+}
+
+.pokemon {
+    width: 100%;
+    height: 73%;
+    /* background-color: var(--blue); */
+}
+
+.pokemon-name {
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.pokemon-types{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: .5rem;
+}
+
+.type {
+    width: 2rem;
+    height: 2rem;
+    background-color: #eee;
+    border-radius: 50%;
+    padding: .1rem;
+}
+
+.type-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+
+.circle{
+    width: 160px; /* 50% of the parent's width */
+    height: 160px; /* 50% of the parent's height */
+    border-radius: 100%;
+    /* background-color: #F5D125; */
+    position: absolute; /* Allows for positioning within the parent */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to be perfectly centered */
+    z-index: -1;
+}
+
+.pokemon-image {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+}
+
+
+.pokemon-details{
+    width: 100%;
+    padding: .5rem;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    background-color: var(--yellow);
+    font-size: 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+
+/* ----------------------------Modal */
+
+.custom-modal.modal-dialog {
+    max-width: 80%;
+    height: 50%;
+  }
+  
+  .custom-modal .modal-content {
+    height: 100%;
+    background-color: #FFFBF2;
+  }
+
+  .custom-modal-body{
+    width: 100%;
+    height: 100%;
+  }
+
+  .custom-modal-body .col img{
+    z-index: 1;
+  }
+  
+
+  .modal-circle{
+    width: 500px; /* 50% of the parent's width */
+    height: 500px; /* 50% of the parent's height */
+    border-radius: 100%;
+    /* background-color: #F5D125; */
+    position: absolute; /* Allows for positioning within the parent */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to be perfectly centered */
+}
+
+.pokeball {
+    width: 490px; /* 50% of the parent's width */
+    height: 490px; /* 50% of the parent's height */
+    border-radius: 100%;
+    position: absolute; /* Allows for positioning within the parent */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to be perfectly centered */
+    fill: #FFF8D8;
+    opacity: .4;
+    z-index: 1;
+}
+
+.modal-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion {
+    font-family: 'Poppins', sans-serif;
+}
+
+.accordion-item {
+    margin-bottom: .3rem;
+}
+
+.accordion-button.collapsed{
+    background-color:  rgba(245, 209, 37, 0.2);
+    color:var(--yellow);
+    font-weight: 500;
+     
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: var(--yellow) !important;
+    color: var(--white) !important;
+    font-weight: bold !important;
+  }
+  
+  .accordion-button:hover {
+    border: 1px solid var(--yellow); /* Change background on hover */
+    font-weight: 500 ;
+  }
+  
