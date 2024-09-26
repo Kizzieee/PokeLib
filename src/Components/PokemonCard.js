@@ -4,7 +4,7 @@ import axios from "axios";
 import typeIcons from "../Assets/typeIcons"; // Import from the new file
 import Modal from "./Modal";
 
-export default function PokemonCard({ name, url, key }) {
+export default function PokemonCard({ name, url }) {
   const [image, setImage] = useState(null);
   const [types, setTypes] = useState([]);
 
@@ -61,7 +61,7 @@ export default function PokemonCard({ name, url, key }) {
     return types.map((type, index) => (
       <div
         title={type}
-        key={index}
+        // key={index}
         className="type"
         style={{ backgroundColor: typeColors[type] }}
       >

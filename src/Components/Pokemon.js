@@ -3,15 +3,6 @@ import axios from "axios";
 import PokemonCard from "./PokemonCard";
 import "../Style Components/Style.css";
 
-// const row = {
-//   display: "flex",
-//   flexDirection: "row",
-//   justifyContent: "space-between",
-//   alignItems: "flex-center",
-//   flexWrap: "wrap",
-
-// };
-
 function Pokemon() {
   const [pokemons, setPokemons] = useState([]);
   const [offSet, setOffSet] = useState(0);

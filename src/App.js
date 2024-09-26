@@ -4,7 +4,7 @@ import "./Style Components/Style.css";
 // import Pokemon from "./Components/Pokemon";
 // import PokemonTypeFilter from "./PokemonTypeFilter";
 // import NameType from "./NameType";
-import PokemonCard from "./Components/PokemonCard";
+// import PokemonCard from "./Components/PokemonCard";
 
 function App() {
   return (

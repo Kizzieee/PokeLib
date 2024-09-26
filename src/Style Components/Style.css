@@ -349,3 +349,12 @@ h1{
     font-weight: 500 ;
   }
   
+/* ----------------------------------Pokemon Overview */
+.pokemon-overview {
+    line-height: 1;
+}
+
+.pokemon-stats{
+    list-style: none;
+    padding-left: 0;
+}

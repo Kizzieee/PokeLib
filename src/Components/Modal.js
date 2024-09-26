@@ -1,5 +1,7 @@
 import "../Style Components/Style.css";
 import { ReactComponent as Pokeball } from "../Assets/pokeball transparent.svg";
+import PokemonOverview from "./PokemonOverview";
+import PokemonStats from "./PokemonStats";
 
 export default function Modal({
   id,
@@ -54,7 +56,7 @@ export default function Modal({
                   </div>
 
                   {/* ----------------------------Accordion */}
-                  <div class="accordion accordion-flush" id="accordionExample">
+                  <div class="accordion" id="accordionExample">
                     <div class="accordion-item custom-accordion-btn">
                       <h2 class="accordion-header">
                         <button
@@ -73,7 +75,9 @@ export default function Modal({
                         class="accordion-collapse collapse show"
                         data-bs-parent="#accordionExample"
                       >
-                        <div class="accordion-body">loremdasdsdasdasdasdas</div>
+                        <div class="accordion-body">
+                          <PokemonOverview pokemonId={name} />
+                        </div>
                       </div>
                     </div>
                     <div class="accordion-item">
@@ -94,7 +98,9 @@ export default function Modal({
                         class="accordion-collapse collapse"
                         data-bs-parent="#accordionExample"
                       >
-                        <div class="accordion-body"></div>
+                        <div class="accordion-body">
+                          <PokemonStats pokemonId={name} />
+                        </div>
                       </div>
                     </div>
                     <div class="accordion-item">
