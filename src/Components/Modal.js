@@ -2,6 +2,8 @@ import "../Style Components/Style.css";
 import { ReactComponent as Pokeball } from "../Assets/pokeball transparent.svg";
 import PokemonOverview from "./PokemonOverview";
 import PokemonStats from "./PokemonStats";
+import PokemonAbilities from "./PokemonAbilities";
+import PokemonWeaknesses from "./PokemonWeaknesses";
 
 export default function Modal({
   id,
@@ -50,78 +52,103 @@ export default function Modal({
 
                 {/* ----------------------------Pokemon Overviews */}
                 <div className="col me-4">
-                  <div className="modal-card-header mb-4">
+                  <div className="modal-card-header mb-3">
                     <h1 className="pokemon-name fw-bold">{name}</h1>
                     <div className="pokemon-types">{renderTypes()}</div>
                   </div>
 
                   {/* ----------------------------Accordion */}
-                  <div class="accordion" id="accordionExample">
-                    <div class="accordion-item custom-accordion-btn">
-                      <h2 class="accordion-header">
+                  <div className="accordion" id={`accordion-${id}`}>
+                    <div className="accordion-item custom-accordion-btn">
+                      <h2 className="accordion-header">
                         <button
-                          class="accordion-button"
+                          className="accordion-button"
                           type="button"
                           data-bs-toggle="collapse"
-                          data-bs-target="#collapseOne"
+                          data-bs-target={`#collapseOne-${id}`}
                           aria-expanded="true"
-                          aria-controls="collapseOne"
+                          aria-controls={`collapseOne-${id}`}
                         >
                           Overview
                         </button>
                       </h2>
                       <div
-                        id="collapseOne"
-                        class="accordion-collapse collapse show"
-                        data-bs-parent="#accordionExample"
+                        id={`collapseOne-${id}`}
+                        className="accordion-collapse collapse show"
+                        data-bs-parent={`#accordion-${id}`}
                       >
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                           <PokemonOverview pokemonId={name} />
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
                         <button
-                          class="accordion-button collapsed"
+                          className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
-                          data-bs-target="#collapseTwo"
+                          data-bs-target={`#collapseTwo-${id}`}
                           aria-expanded="false"
-                          aria-controls="collapseTwo"
+                          aria-controls={`collapseTwo-${id}`}
                         >
                           Statistics
                         </button>
                       </h2>
                       <div
-                        id="collapseTwo"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
+                        id={`collapseTwo-${id}`}
+                        className="accordion-collapse collapse"
+                        data-bs-parent={`#accordion-${id}`}
                       >
-                        <div class="accordion-body">
+                        <div className="accordion-body">
                           <PokemonStats pokemonId={name} />
                         </div>
                       </div>
                     </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header">
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
                         <button
-                          class="accordion-button collapsed"
+                          className="accordion-button collapsed"
                           type="button"
                           data-bs-toggle="collapse"
-                          data-bs-target="#collapseThree"
+                          data-bs-target={`#collapseThree-${id}`}
                           aria-expanded="false"
-                          aria-controls="collapseThree"
+                          aria-controls={`collapseThree-${id}`}
                         >
                           Abilities
                         </button>
                       </h2>
                       <div
-                        id="collapseThree"
-                        class="accordion-collapse collapse"
-                        data-bs-parent="#accordionExample"
+                        id={`collapseThree-${id}`}
+                        className="accordion-collapse collapse"
+                        data-bs-parent={`#accordion-${id}`}
                       >
-                        <div class="accordion-body"></div>
+                        <div className="accordion-body">
+                          <PokemonAbilities pokemonId={name} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="accordion-item">
+                      <h2 className="accordion-header">
+                        <button
+                          className="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target={`#collapseFour-${id}`}
+                          aria-expanded="false"
+                          aria-controls={`collapseFour-${id}`}
+                        >
+                          Weaknesses, Resistances, Immunities
+                        </button>
+                      </h2>
+                      <div
+                        id={`collapseFour-${id}`}
+                        className="accordion-collapse collapse"
+                        data-bs-parent={`#accordion-${id}`}
+                      >
+                        <div className="accordion-body">
+                          <PokemonWeaknesses pokemonId={name} />
+                        </div>
                       </div>
                     </div>
                   </div>
