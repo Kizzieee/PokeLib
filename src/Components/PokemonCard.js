@@ -3,6 +3,7 @@ import { useState, useEffect, useMemo, useCallback } from "react";
 import axios from "axios";
 import typeIcons from "../Assets/typeIcons"; // Import from the new file
 import Modal from "./Modal";
+import missing from "../Assets/missing.svg";
 
 export default function PokemonCard({ name, url }) {
   const [image, setImage] = useState(null);
@@ -77,15 +78,24 @@ export default function PokemonCard({ name, url }) {
   // Use the name as a unique identifier for the modal ID
   const modalId = `modal-${name}`;
 
+  // Apply class based on name length
+  const nameClass =
+    name.length > 14 ? "pokemon-name long-name" : "pokemon-name";
+
   return (
     <>
       <div className="pokemon-card">
         <div className="card-header">
-          <h1 className="pokemon-name">{name}</h1>
+          <h2 className={nameClass}>{name}</h2>
           <div className="pokemon-types">{renderTypes()}</div>
         </div>
         <div className="pokemon">
-          <img className="pokemon-image" src={image} alt={name} />
+          {image ? (
+            <img className="pokemon-image" src={image} alt={name} />
+          ) : (
+            <img className="pokemon-image" src={missing} alt={name} />
+          )}
+
           <div
             className="circle"
             style={{ backgroundColor: primaryTypeColor }}

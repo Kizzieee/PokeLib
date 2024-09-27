@@ -47,9 +47,9 @@ const PokemonAbilities = ({ pokemonId }) => {
       {error ? (
         <p>{error}</p>
       ) : (
-        <ul>
+        <ul className="pokemon-abilities">
           {abilities.map((ability, index) => (
-            <li key={index}>
+            <li className="mb-2" key={index}>
               <strong>{ability.name.toUpperCase()}:</strong>{" "}
               {ability.description}
             </li>

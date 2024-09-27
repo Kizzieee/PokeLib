@@ -1,5 +1,6 @@
 import PokeLib from "../Assets/PokeLib.svg";
 import Pokeball from "../Assets/Pokemon ball.svg";
+import PokemonTypes from "./PokemonTypes";
 import Pokemon from "./Pokemon";
 
 function Home() {
@@ -13,7 +14,14 @@ function Home() {
             abilities, and more for every Pokémon. Start your journey and
             explore now!
           </p>
-          <button>Explore now!</button>
+          <a href="#pokemon-result" className="explore-btn">
+            <button
+              type="button"
+              className="btn btn-lg btn-danger btn-scroll"
+            >
+              EXPLORE NOW
+            </button>
+          </a>
         </div>
 
         <div className="hero-text-img">
@@ -22,8 +30,9 @@ function Home() {
         </div>
       </div>
 
-      <div>
-        <Pokemon />
+      <div id="pokemon-result">
+        <PokemonTypes />
+        {/* <Pokemon /> */}
       </div>
     </>
   );

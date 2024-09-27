@@ -29,12 +29,7 @@ const PokemonStats = ({ pokemonId }) => {
         <ul className="pokemon-stats">
           {stats.map((stat) => (
             <li key={stat.stat.name}>
-              <strong>
-                {stat.stat.name.charAt(0).toUpperCase() +
-                  stat.stat.name.slice(1)}
-                :
-              </strong>{" "}
-              {stat.base_stat}
+              <strong>{stat.stat.name.toUpperCase()}:</strong> {stat.base_stat}
             </li>
           ))}
         </ul>

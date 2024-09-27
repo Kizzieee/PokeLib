@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../Style Components/Style.css'
+import "../Style Components/Style.css";
 import axios from "axios";
 
 const PokemonOverview = ({ pokemonId }) => {
@@ -42,7 +42,7 @@ const PokemonOverview = ({ pokemonId }) => {
         setGeneration(generationResponse.data.name);
       } catch (error) {
         console.error("Error fetching Pokémon species data:", error);
-        setError("Error fetching Pokémon species data");
+        setError("No data available");
       }
     };
 
@@ -58,7 +58,7 @@ const PokemonOverview = ({ pokemonId }) => {
         setWeight(pokemonResponse.data.weight / 10); // weight in kilograms
       } catch (error) {
         console.error("Error fetching Pokémon data:", error);
-        setError("Error fetching Pokémon data");
+        setError("No data available");
       }
     };
 
@@ -73,19 +73,19 @@ const PokemonOverview = ({ pokemonId }) => {
         <p>{error}</p>
       ) : (
         <div className="pokemon-overview">
-          <p>{description ? `${description} m` : "Loading..."}</p>
+          <p>{description ? `${description}` : "Loading..."}</p>
           <p>
-            <strong>Height:</strong> {height ? `${height} m` : "Loading..."}
+            <strong>HEIGHT:</strong> {height ? `${height} m` : "Loading..."}
           </p>
           <p>
-            <strong>Weight:</strong> {weight ? `${weight} kg` : "Loading..."}
+            <strong>WEIGHT:</strong> {weight ? `${weight} kg` : "Loading..."}
           </p>
           <p>
-            <strong>Capture Rate:</strong>{" "}
+            <strong>CAPTURE RATE:</strong>{" "}
             {captureRate ? captureRate : "Loading..."}
           </p>
           <p>
-            <strong>Generation:</strong>{" "}
+            <strong>GENERATION:</strong>{" "}
             {generation ? generation : "Loading..."}
           </p>
         </div>

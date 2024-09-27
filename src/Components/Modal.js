@@ -4,11 +4,13 @@ import PokemonOverview from "./PokemonOverview";
 import PokemonStats from "./PokemonStats";
 import PokemonAbilities from "./PokemonAbilities";
 import PokemonWeaknesses from "./PokemonWeaknesses";
+import missing from "../Assets/missing.svg";
 
 export default function Modal({
   id,
   name,
   image,
+  types,
   renderTypes,
   primaryTypeColor,
 }) {
@@ -23,11 +25,11 @@ export default function Modal({
         aria-labelledby={`${id}Label`}
         aria-hidden="true"
       >
-        <div className="modal-dialog custom-modal modal-dialog-centered">
+        <div className="modal-dialog custom-modal modal-dialog-centered p-0">
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id={`${id}Label`}>
-                {name} Details
+                Details
               </h1>
               <button
                 type="button"
@@ -37,13 +39,25 @@ export default function Modal({
               ></button>
             </div>
             <div className="modal-body">
-              <div className="d-flex flex-row custom-modal-body">
+              <div className="custom-modal-body">
                 <div className="col position-relative">
                   <svg className="pokeball">
                     <Pokeball />
                   </svg>
 
-                  <img className="pokemon-image" src={image} alt={name} />
+                  {image ? (
+                    <img
+                      className="modal-pokemon-image"
+                      src={image}
+                      alt={name}
+                    />
+                  ) : (
+                    <img
+                      className="modal-pokemon-image"
+                      src={missing}
+                      alt={name}
+                    />
+                  )}
                   <div
                     className="modal-circle"
                     style={{ backgroundColor: primaryTypeColor }}
@@ -51,7 +65,7 @@ export default function Modal({
                 </div>
 
                 {/* ----------------------------Pokemon Overviews */}
-                <div className="col me-4">
+                <div id="col-2" className="col ">
                   <div className="modal-card-header mb-3">
                     <h1 className="pokemon-name fw-bold">{name}</h1>
                     <div className="pokemon-types">{renderTypes()}</div>
@@ -59,6 +73,7 @@ export default function Modal({
 
                   {/* ----------------------------Accordion */}
                   <div className="accordion" id={`accordion-${id}`}>
+                    {/*-------------------------Overview */}
                     <div className="accordion-item custom-accordion-btn">
                       <h2 className="accordion-header">
                         <button
@@ -77,11 +92,13 @@ export default function Modal({
                         className="accordion-collapse collapse show"
                         data-bs-parent={`#accordion-${id}`}
                       >
-                        <div className="accordion-body">
+                        <div className="accordion-body scrollable-content">
                           <PokemonOverview pokemonId={name} />
                         </div>
                       </div>
                     </div>
+
+                    {/*-------------------------Statistics */}
                     <div className="accordion-item">
                       <h2 className="accordion-header">
                         <button
@@ -100,7 +117,7 @@ export default function Modal({
                         className="accordion-collapse collapse"
                         data-bs-parent={`#accordion-${id}`}
                       >
-                        <div className="accordion-body">
+                        <div className="accordion-body scrollable-content">
                           <PokemonStats pokemonId={name} />
                         </div>
                       </div>
@@ -123,7 +140,7 @@ export default function Modal({
                         className="accordion-collapse collapse"
                         data-bs-parent={`#accordion-${id}`}
                       >
-                        <div className="accordion-body">
+                        <div className="accordion-body scrollable-content">
                           <PokemonAbilities pokemonId={name} />
                         </div>
                       </div>
@@ -146,7 +163,7 @@ export default function Modal({
                         className="accordion-collapse collapse"
                         data-bs-parent={`#accordion-${id}`}
                       >
-                        <div className="accordion-body">
+                        <div className="accordion-body scrollable-content">
                           <PokemonWeaknesses pokemonId={name} />
                         </div>
                       </div>
