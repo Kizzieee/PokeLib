@@ -1,7 +1,7 @@
 import PokeLib from "../Assets/PokeLib.svg";
 import Pokeball from "../Assets/Pokemon ball.svg";
 import PokemonTypes from "./PokemonTypes";
-import Pokemon from "./Pokemon";
+
 
 function Home() {
   return (

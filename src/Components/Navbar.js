@@ -1,6 +1,7 @@
 // Components
 import Home from "./Home";
 import About from "./About";
+import Footer from "./Footer";
 
 // Assets
 import PokeLib from "../Assets/PokeLib.svg";
@@ -81,14 +82,14 @@ function Navbar() {
 
           {/* Offcanvas menu for smaller screens */}
           <div
-            className="offcanvas offcanvas-end d-lg-none"
+            className="offcanvas offcanvas-end d-md-none"
             tabIndex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
             <div className="offcanvas-header">
               <h5 className="offcanvas-title fw-bold" id="offcanvasNavbarLabel">
-              PokéLib Menu
+                PokéLib Menu
               </h5>
               <button
                 type="button"
@@ -131,6 +132,8 @@ function Navbar() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }
