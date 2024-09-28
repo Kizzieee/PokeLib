@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/PokeLib/static/css/main.7c184df1.css",
-    "main.js": "/PokeLib/static/js/main.ee7914ec.js",
-    "static/js/453.af7d4cdb.chunk.js": "/PokeLib/static/js/453.af7d4cdb.chunk.js",
-    "static/media/PokeLib.svg": "/PokeLib/static/media/PokeLib.06e4cb4b555608eca048c55f7bd876e4.svg",
-    "static/media/missing.svg": "/PokeLib/static/media/missing.3a9257362791aadc51c4b8fcb1bc4091.svg",
-    "static/media/Pokemon ball.svg": "/PokeLib/static/media/Pokemon ball.499612a7b5342abac926a67c13deb442.svg",
-    "static/media/pokeball transparent.svg": "/PokeLib/static/media/pokeball transparent.e2517784692dfac0299464832a638bc1.svg",
-    "index.html": "/PokeLib/index.html",
-    "main.7c184df1.css.map": "/PokeLib/static/css/main.7c184df1.css.map",
-    "main.ee7914ec.js.map": "/PokeLib/static/js/main.ee7914ec.js.map",
-    "453.af7d4cdb.chunk.js.map": "/PokeLib/static/js/453.af7d4cdb.chunk.js.map"
+    "main.css": "/static/css/main.f79760af.css",
+    "main.js": "/static/js/main.732497f9.js",
+    "static/js/453.af7d4cdb.chunk.js": "/static/js/453.af7d4cdb.chunk.js",
+    "static/media/PokeLib.svg": "/static/media/PokeLib.06e4cb4b555608eca048c55f7bd876e4.svg",
+    "static/media/missing.svg": "/static/media/missing.3a9257362791aadc51c4b8fcb1bc4091.svg",
+    "static/media/Pokemon ball.svg": "/static/media/Pokemon ball.499612a7b5342abac926a67c13deb442.svg",
+    "static/media/announcement.svg": "/static/media/announcement.bd2725f75d6ef6d6f664125933593b32.svg",
+    "static/media/pokeball transparent.svg": "/static/media/pokeball transparent.e2517784692dfac0299464832a638bc1.svg",
+    "index.html": "/index.html",
+    "main.f79760af.css.map": "/static/css/main.f79760af.css.map",
+    "main.732497f9.js.map": "/static/js/main.732497f9.js.map",
+    "453.af7d4cdb.chunk.js.map": "/static/js/453.af7d4cdb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c184df1.css",
-    "static/js/main.ee7914ec.js"
+    "static/css/main.f79760af.css",
+    "static/js/main.732497f9.js"
   ]
 }
