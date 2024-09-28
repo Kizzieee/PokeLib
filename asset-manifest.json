@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PokeLib/static/css/main.f79760af.css",
-    "main.js": "/PokeLib/static/js/main.4a899a79.js",
+    "main.js": "/PokeLib/static/js/main.fce8157c.js",
     "static/js/453.af7d4cdb.chunk.js": "/PokeLib/static/js/453.af7d4cdb.chunk.js",
     "static/media/PokeLib.svg": "/PokeLib/static/media/PokeLib.06e4cb4b555608eca048c55f7bd876e4.svg",
     "static/media/missing.svg": "/PokeLib/static/media/missing.3a9257362791aadc51c4b8fcb1bc4091.svg",
@@ -10,11 +10,11 @@
     "static/media/pokeball transparent.svg": "/PokeLib/static/media/pokeball transparent.e2517784692dfac0299464832a638bc1.svg",
     "index.html": "/PokeLib/index.html",
     "main.f79760af.css.map": "/PokeLib/static/css/main.f79760af.css.map",
-    "main.4a899a79.js.map": "/PokeLib/static/js/main.4a899a79.js.map",
+    "main.fce8157c.js.map": "/PokeLib/static/js/main.fce8157c.js.map",
     "453.af7d4cdb.chunk.js.map": "/PokeLib/static/js/453.af7d4cdb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f79760af.css",
-    "static/js/main.4a899a79.js"
+    "static/js/main.fce8157c.js"
   ]
 }
